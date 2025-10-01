@@ -29,4 +29,4 @@
 
 ---
 
-![Visitor Count](https://profile-counter.glitch.me/DaranDeng/count.svg)
+!(https://profile-counter.glitch.me/DaranDeng/count.svg)
