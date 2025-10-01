@@ -1,4 +1,9 @@
-remote_theme: "jeffreytse/jekyll-theme-yat" 
+remote_theme: "cotes2020/jekyll-theme-chirpy"
+title: 不是甘愿做坏子的赛博后宫
+description: 随便玩
+author:
+  name: 邓达然
+  url: https://darandeng.github.io/
 plugins:
   - jekyll-remote-theme
-
+  
