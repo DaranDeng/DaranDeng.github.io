@@ -1,0 +1,4 @@
+title: 不是甘愿做坏子的赛博后宫 
+plugins:
+  - jekyll-remote-theme
+remote_theme: "jeffreytse/jekyll-theme-yat"  # 比如 "mmistakes/minimal-mistakes"（去主题仓库 README 抄这个）
