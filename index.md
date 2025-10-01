@@ -29,4 +29,3 @@
 
 ---
 
-!(https://profile-counter.glitch.me/DaranDeng/count.svg)
