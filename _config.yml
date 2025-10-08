@@ -1,6 +1,0 @@
-defaults:
-  - scope:
-      path: ""
-      paginate: 5
-    values:
-      layout: "default"  # 主题默认
