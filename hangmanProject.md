@@ -29,4 +29,4 @@ int isGuessed[len] = {0};  // 错误！len 不是 const`
 大多数字符串函数（如 strcpy, scanf, fgets）会自动加上 '\0'，printf不会
 + 在函数的函数头写的形参 isGuessed[]与*isGuessed,char lines[2][len+1]与char **lines有什么不同吗？
   前者是等价的。后者的问题关键在于char lines[2][len+1]的数组名lines是不是指针的指针？不是，是指向数组的指针，不要混淆数组与数组名，lines+1移动len+1个char，而char **line，line+1移动一个指针。
-  
+## - [源代码仓库](https://github.com/DaranDeng/hangman)
