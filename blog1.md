@@ -5,6 +5,7 @@
 - 2025年11月10日，[C语言hangman项目](/hangmanProject)
 ## 数据结构与算法
 - 2025年12月7日，[滑动窗口](/滑动窗口)
+- 2026年2月4日，[哈希法](https://github.com/DaranDeng/data-structure-and-algorithm/哈希法)
 ## 计算机系统2A
-- 1月2号，正在全力以赴备考计算机系统2A
+- 2026年1月2号，正在全力以赴备考计算机系统2A
 
