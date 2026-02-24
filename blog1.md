@@ -9,4 +9,6 @@
 - 2026年2月4日，[哈希法](https://github.com/DaranDeng/data-structure-and-algorithm/blob/main/哈希法.md)
 ## 计算机系统2A
 - 2026年1月2号，正在全力以赴备考计算机系统2A
+## 操作系统预习
+- 20262月10日，通过王道的操作系统网课来预习，[笔记]()
 
