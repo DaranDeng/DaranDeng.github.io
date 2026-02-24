@@ -10,5 +10,5 @@
 ## 计算机系统2A
 - 2026年1月2号，正在全力以赴备考计算机系统2A
 ## 操作系统预习
-- 20262月10日，通过王道的操作系统网课来预习，[笔记]()
+- 20262月10日，通过王道的操作系统网课来预习，[笔记](https://1drv.ms/o/c/cacdc6c899074fc2/IgCkLs5qTATlSJ0A-ssO9D8sATsGj83DOE7GhpGUSwOkJL4?e=Qkstkp)
 
