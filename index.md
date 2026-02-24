@@ -35,7 +35,7 @@
 
 *   **身份**：末流985计算机专业大学生。
 *   **方向**：云计算、网络传输、nginx、DPDK、容器、C/C++。
-*   **博客**：记录我的技术思考与学习点滴。📝 [**点击访问我的技术博客**](https://github.com/DaranDeng/DaranDeng.github.io/blob/main/blog1.md)
+
 
 ---
 
