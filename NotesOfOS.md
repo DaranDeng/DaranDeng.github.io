@@ -241,16 +241,18 @@ CPU 自动从用户态切换到内核态
 - **类型**：
   - 记录型信号量
   - 整数型信号量
+- P操作是wait，V操作是signal。
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/840155e6-26fe-4ed4-ba97-ddef648499bf" />
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/231921be-3adb-4c0b-8aa5-8556ea9acbe5" />
 
 ---
 
 ## 5. 实现进程互斥的代码逻辑
 
 1. 分析并发进程的活动，划定临界区。
-2. 设置信号量为 `mutex`，初始值为 1（不同的资源要设置不同的信号量）。
+2. 设置信号量为 `mutex`，初始值为 1（不同的资源要设置不同的信号量），muteX就是进入临界区的名额，因此为了保证互斥，必须设置名额只有一个。
 3. 在进入区执行 `P(mutex)`，申请资源。
 4. 在退出区执行 `V(mutex)`，释放资源。
-<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/840155e6-26fe-4ed4-ba97-ddef648499bf" />
 
 ---
 
@@ -258,4 +260,13 @@ CPU 自动从用户态切换到内核态
 
 由于实际需要，不同进程并发运行时，某些代码段必须按照一定的顺序执行。但由于进程的异步性，无法天然确定执行顺
 序，因此需要人为地使用技巧来控制同步。
-<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/231921be-3adb-4c0b-8aa5-8556ea9acbe5" />
+
+<img width="2559" height="1599" alt="image" src="https://github.com/user-attachments/assets/581c86d2-6ebb-4a46-9781-6e7398ff0cfe" />
+
+---
+
+# 生产者消费者问题 
+<img width="2205" height="1339" alt="image" src="https://github.com/user-attachments/assets/cb42f114-256d-4389-9105-dfc57d82e70f" />
+<img width="2112" height="1261" alt="image" src="https://github.com/user-attachments/assets/f2a8abac-1d50-4280-95cf-298aeb19161e" />
+
+
