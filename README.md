@@ -9,18 +9,21 @@
 ---
 
 # 目录
-1. [我的标签与信条](#我的标签与信条)
-2. [关于我与博客](#关于我与博客)
-3. [文档概览：四门基础课](#文档概览四门基础课)
-   - [数据结构和算法 (C语言实现)](#数据结构和算法-datastructure--algorithm-c语言实现)
-   - [操作系统](#操作系统-operating-system)
-   - [计算机网络](#计算机网络-computer-network)
-   - [计算机组成原理](#计算机组成原理-principles-of-computer-composition)
-4. [推荐学习路线](#推荐学习路线)
-5. [参考与致谢](#参考与致谢)
-6. [关于本仓库与贡献](#关于本仓库与贡献)
-7. [与我联系](#与我联系)
-8. [最后，送你一卦](#最后送你一卦)
+- [前言](#前言)
+- [目录](#目录)
+- [我的标签与信条](#我的标签与信条)
+- [关于我与博客](#关于我与博客)
+- [文档概览：四门基础课](#文档概览四门基础课)
+  - [综合项目](#综合项目)
+  - [数据结构与算法](#数据结构与算法)
+  - [操作系统 Operating System](#操作系统-operating-system)
+  - [计算机网络 Computer Network](#计算机网络-computer-network)
+  - [计算机组成原理 Principles of Computer Composition](#计算机组成原理-principles-of-computer-composition)
+- [推荐学习路线](#推荐学习路线)
+- [参考与致谢](#参考与致谢)
+- [关于本仓库与贡献](#关于本仓库与贡献)
+- [与我联系](#与我联系)
+- [最后，送你一卦](#最后送你一卦)
 
 ---
 
@@ -34,7 +37,7 @@
 # 关于我与博客
 
 *   **身份**：末流985计算机专业大学生。
-*   **方向**：云计算、网络传输、nginx、DPDK、容器、C/C++。
+*   **方向**：未定?
 
 
 ---
@@ -55,34 +58,21 @@
 *注：文档、字数、插图等数据持续更新中，此表反映的是截至2026年初的累积成果。*
 
 ---
-## 锻炼代码能力的小项目
+## 综合项目
 
-> 这是编程的“内功”，是构建所有程序的基石。我用C语言来实现，因为它足够简单，也足够接近本质。
-
-**📌 前置需求**：C语言基础（数据类型、指针、结构体、函数等）。
+C语言基础（数据类型、指针、结构体、函数等）。
 
 **📚 章节列表**：
-- 2025年11月10日，[C语言hangman项目](/hangmanProject.md)
+- 2025年11月10日，[C语言hangman项目，前置要求：C语言基础（数据类型、指针、结构体、函数等）。](/hangmanProject.md)
 
-## 数据结构与算法
-
-- 2025年12月3日，[广/深度优先算法](https://github.com/DaranDeng/data-structure-and-algorithm/blob/main/bfs%20and%20dfs.md)
-
-- 2025年12月7日，[滑动窗口](https://github.com/DaranDeng/data-structure-and-algorithm/blob/main/滑动窗口.md)
-- 2026年2月4日，[哈希法](https://github.com/DaranDeng/data-structure-and-algorithm/blob/main/哈希法.md)
+## [数据结构与算法]([text](https://github.com/DaranDeng/data-structure-and-algorithm))
 
 🔗 **参考视频**：[数据结构_王道计算机考研](https://www.bilibili.com/video/BV1b7411N798)
 
 ---
 
-## 操作系统 Operating System
+## [操作系统 Operating System](/NotesOfOS.md)
 
-> 操作系统是连接硬件与软件的桥梁。学习它，我常常把自己想象成一个城市的市长，去管理进程、分配内存、调度IO。用现实的比喻，理解抽象的概念。
-
-**📚 章节列表**：
-- [41 操作系统概要、功能特征与发展演变、操作系统运行机制、中断与异常、系统调用、体系结构、调度](https://github.com/DaranDeng/DaranDeng.github.io/blob/main/NotesOfOS.md)
-- ... *(此处保留原文档中所有OS章节链接)* ...
-- [56 IO 管理2-设备与磁盘管理](【OS】操作系统/56%20IO%20管理2-设备与磁盘管理.md)
 
 🔗 **参考视频**：[操作系统_王道计算机考研](https://www.bilibili.com/video/BV1YE411D7nH)
 
@@ -90,7 +80,7 @@
 
 ## 计算机网络 Computer Network
 
-> （施工中...）这个世界如何通过“握手”和“挥手”连接在一起？数据包如何跨越山海找到回家的路？答案在这里。
+> （施工中...）
 
 🔗 **参考视频**：
 - [计算机网络微课堂（湖科大教书匠）](https://www.bilibili.com/video/BV1c4411d7jb)
@@ -98,10 +88,10 @@
 
 ---
 
-## 计算机组成原理 Principles of Computer Composition
+## [计算机组成原理 Principles of Computer Composition]([text](https://github.com/DaranDeng/DaranDeng.github.io/tree/main/Computer%20Architecture))
 
-> （施工中...）从晶体管到CPU，从汇编到指令集。这是一场“深入骨髓”的探索，理解计算机究竟是如何“思考”的。
-
+> （施工中...）
+>
 🔗 **参考视频**：
 - [【CSAPP-深入理解计算机系统】](https://www.bilibili.com/video/BV1cD4y1D7uR)
 - [计算机组成原理_王道计算机考研](https://www.bilibili.com/video/BV1ps4y1d73V)
@@ -119,15 +109,13 @@
 # 参考与致谢
 
 - **视频课程**：主要参考王道考研系列辅导视频，内容详实，逻辑清晰，非常适合自学。
-- **图片绘制**：笔记中的所有插图均由我本人重新绘制，力求配色统一、清晰美观，让知识点“看起来”更舒服。
 - **代码**：所有示例代码均为独立手敲，并经过编译运行验证（后续会单独归档）。
 
 计算机基础知识是技术成长的基石。完成这些之后，我还计划深入Linux操作、编译构建、Docker、设计模式、数据库等领域。**学海无涯，学无止境**。
 
 # 关于本仓库与贡献
 
-- **编辑工具**：本文档采用 [Obsidian](https://obsidian.md/) 和 VSCode 编写，以实现更好的结构化展示与链接跳转。
-- **社群维护**：本仓库致力于对计算机基础知识的总结与回顾。如果你也有兴趣，欢迎一起参与维护，共同完善这份学习资料。
+- **编辑工具**：本文档采用 markdown和 VSCode 编写，以实现更好的结构化展示与链接跳转。
 - **贡献指南**：请参考 [CONTRIBUTING.md](CONTRIBUTING.md)
 
 # 与我联系
