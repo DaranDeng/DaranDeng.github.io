@@ -65,7 +65,7 @@ C语言基础（数据类型、指针、结构体、函数等）。
 **📚 章节列表**：
 - 2025年11月10日，[C语言hangman项目，前置要求：C语言基础（数据类型、指针、结构体、函数等）。](/hangmanProject.md)
 
-## [数据结构与算法]([text](https://github.com/DaranDeng/data-structure-and-algorithm))
+## [数据结构与算法](https://github.com/DaranDeng/data-structure-and-algorithm)
 
 🔗 **参考视频**：[数据结构_王道计算机考研](https://www.bilibili.com/video/BV1b7411N798)
 
@@ -88,12 +88,12 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 ---
 
-## [计算机组成原理 Principles of Computer Composition]([text](https://github.com/DaranDeng/DaranDeng.github.io/tree/main/Computer%20Architecture))
+## [计算机组成原理 Principles of Computer Composition](https://github.com/DaranDeng/DaranDeng.github.io/tree/main/Computer%20Architecture)
 
 > （施工中...）
 >
 🔗 **参考视频**：
-- [【CSAPP-深入理解计算机系统】](https://www.bilibili.com/video/BV1cD4y1D7uR)
+- [CSAPP-深入理解计算机系统](https://www.bilibili.com/video/BV1cD4y1D7uR)
 - [计算机组成原理_王道计算机考研](https://www.bilibili.com/video/BV1ps4y1d73V)
 
 ---
