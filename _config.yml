@@ -1,3 +1,1 @@
-include:
-  - README.md  # 如果你想把 README.md 也渲染成页面
 theme: jekyll-theme-cayman
