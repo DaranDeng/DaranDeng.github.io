@@ -1,1 +1,4 @@
-theme: jekyll-theme-cayman
+title: DaranDeng
+description: 自然清新且高雅的个人主页
+markdown: kramdown
+theme: null              # 不要用官方 theme，使用自定义 layout

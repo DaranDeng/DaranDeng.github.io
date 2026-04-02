@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/style.css">
+  {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-title"><a href="/">{{ site.title | default: "Home" }}</a></div>
+    <ul class="nav-links">
+      <li><a href="/">首页</a></li>
+      <li><a href="/notes">笔记</a></li>
+      <!-- 你可以继续添加更多链接 -->
+      <li><a href="https://github.com/DaranDeng" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+  {% if page.url == "/" or page.url == "/index.html" or page.url == "/index.md" %}
+  <header class="hero">
+    <img class="hero-bg" src="/assets/hero.jpg" alt="自然背景">
+    <div class="hero-content">
+      <h1>Forever Revolutionary<br>Forever Young</h1>
+      <p class="author">DAVID SENSEI</p>
+      <a class="hero-btn" href="/notes">开始探索 →</a>
+    </div>
+  </header>
+  {% endif %}
+  <main class="main-content">
+    {{ content }}
+  </main>
+  <footer>
+    <div>© {{ "now" | date: "%Y" }} DaranDeng &nbsp;|&nbsp; Powered by GitHub Pages</div>
+  </footer>
+</body>
+</html>
