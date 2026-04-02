@@ -93,8 +93,7 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 ---
 
-## [计算机组成原理 Principles of Computer Composition]([text](https://darandeng.github.io/Computer Architecture))
-
+## [计算机组成原理 Principles of Computer Composition](https://darandeng.github.io/Computer%20Architecture)
 > （施工中...）
 >
 🔗 **参考视频**：
