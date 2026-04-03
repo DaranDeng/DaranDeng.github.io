@@ -1,3 +1,8 @@
+---
+layout: default
+title: Pipelining SuperScalar
+---
+
 # 流水线与超标量处理器（Pipelining & SuperScalar）
 
 
