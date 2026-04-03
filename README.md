@@ -73,7 +73,7 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 ---
 
-## [数据结构与算法]([text](https://github.com/DaranDeng/data-structure-and-algorithm))
+## [数据结构与算法](https://github.com/DaranDeng/data-structure-and-algorithm)
 
 🔗 **参考视频**：[数据结构_王道计算机考研](https://www.bilibili.com/video/BV1b7411N798)
 
