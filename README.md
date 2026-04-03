@@ -79,7 +79,7 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 ---
 
-## [操作系统 Operating System](/NotesOfOS.md)
+## 操作系统 Operating System
 
 **📚 章节列表**
 
