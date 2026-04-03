@@ -103,11 +103,11 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 **📚 章节列表**
 
-- [2026.3.12,totalKnowledge](totalKnowledge.md)
+- [2026.3.12,totalKnowledge](/totalKnowledge.md)
 
-- [2026.3.28,Pipelining SuperScalar](Pipelining%20SuperScalar.md)
+- [2026.3.28,Pipelining SuperScalar](/Pipelining%20SuperScalar.md)
 
-- [2026.3.31,tutorial01](tutorial01.md)
+- [2026.3.31,tutorial01](/tutorial01.md)
 
 🔗 **参考视频**：
 - [【CSAPP-深入理解计算机系统】](https://www.bilibili.com/video/BV1cD4y1D7uR)
