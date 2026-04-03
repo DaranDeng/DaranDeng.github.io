@@ -63,12 +63,15 @@ title: 关于我
 *注：文档、字数、插图等数据持续更新中，此表反映的是截至2026年初的累积成果。*
 
 ---
+
 ## 综合项目
 
 C语言基础（数据类型、指针、结构体、函数等）。
 
 **📚 章节列表**：
 - 2025年11月10日，[C语言hangman项目，前置要求：C语言基础（数据类型、指针、结构体、函数等）。](/hangmanProject.md)
+
+---
 
 ## [数据结构与算法]([text](https://github.com/DaranDeng/data-structure-and-algorithm))
 
@@ -78,6 +81,9 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 ## [操作系统 Operating System](/NotesOfOS.md)
 
+**📚 章节列表**
+
+- [2026.2.05,OS basic knowledge](/NotesOfOS.md)
 
 🔗 **参考视频**：[操作系统_王道计算机考研](https://www.bilibili.com/video/BV1YE411D7nH)
 
@@ -93,9 +99,16 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 ---
 
-## [计算机组成原理 Principles of Computer Composition](https://darandeng.github.io/Computer%20Architecture)
-> （施工中...）
->
+## 计算机组成原理 Principles of Computer Composition
+
+**📚 章节列表**
+
+- [2026.3.12,totalKnowledge](totalKnowledge.md)
+
+- [2026.3.28,Pipelining SuperScalar](Pipelining%20SuperScalar.md)
+
+- [2026.3.31,tutorial01](tutorial01.md)
+
 🔗 **参考视频**：
 - [【CSAPP-深入理解计算机系统】](https://www.bilibili.com/video/BV1cD4y1D7uR)
 - [计算机组成原理_王道计算机考研](https://www.bilibili.com/video/BV1ps4y1d73V)
