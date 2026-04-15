@@ -1,1 +1,7 @@
 theme: jekyll-theme-cayman
+
+# Enable MathJax for mathematical formulas
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
