@@ -3,10 +3,9 @@ layout: default
 title: tutorial01
 ---
 
-见(PDF文档)[file:///F:/%E6%9C%AC%E5%AD%A6%E6%9C%9F%E8%AF%BE%E4%BB%B6%E6%B1%87%E6%80%BB/2B/Tutorial%20Questions.pdf]
 ---
 
-### **(c) 完整 BTB 访问记录表**
+### **完整 BTB 访问记录表**
 
 | Address of branch instruction (hex) | BTB hit or miss | Prediction from BTB (Taken or Not Taken) | Actual outcome of branch instruction |
 |-------------------------------------|-----------------|------------------------------------------|--------------------------------------|

@@ -35,8 +35,18 @@ long long Fibonacci2(int n){
     else if(n==1)return 1;
     return Fibonacci2(n-1)+Fibonacci2(n-2);
 }
+
+// Tail-recursive:时空复杂度都是O(n),遇到这种题型最好的做法是手动模拟
+long long tribonacci(int n, int a, int b, int c){
+    if(n == 0)return a;
+    else{
+        return tribonacci(n-1,b,c,a+b+c);
+    }
+}
+
 int main(){
-    std::cout<<exponential(3,0)<<std::endl;
-    std::cout<<Fibonacci2(0);
+    // std::cout<<exponential(3,0)<<std::endl;
+    // std::cout<<Fibonacci2(0)<<std::endl;
+    std::cout<<tribonacci(4,0,1,2);
     return 0;
 }
