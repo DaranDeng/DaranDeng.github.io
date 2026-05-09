@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 为什么**排列（Permutations）**和**子集（Subsets）**被视为递归对象：
 

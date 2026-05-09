@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 在操作系统的进程调度（Scheduling）中，评价调度算法好坏的指标通常分为两类：**面向用户的准则（User-Oriented Criteria）** 和 **面向系统的准则（System-Oriented Criteria）**。
 
 ---
