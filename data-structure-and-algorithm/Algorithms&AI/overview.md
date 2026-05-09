@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 Rough Content (subject to change)
 Introduction to some theory of algorithms, Algorithm 
 specification, Algorithms in pseudocode, Iteration and 

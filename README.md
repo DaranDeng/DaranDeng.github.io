@@ -19,11 +19,12 @@ title: 关于我
 - [我的标签与信条](#我的标签与信条)
 - [关于我与博客](#关于我与博客)
 - [文档概览：四门基础课](#文档概览四门基础课)
-  - [综合项目](#综合项目)
+  - [综合项目与其他](#综合项目与其他)
   - [数据结构与算法](#数据结构与算法)
   - [操作系统 Operating System](#操作系统-operating-system)
   - [计算机网络 Computer Network](#计算机网络-computer-network)
   - [计算机组成原理 Principles of Computer Composition](#计算机组成原理-principles-of-computer-composition)
+  - [面向对象分析与设计 OOAD](#面向对象分析与设计-ooad)
 - [推荐学习路线](#推荐学习路线)
 - [参考与致谢](#参考与致谢)
 - [关于本仓库与贡献](#关于本仓库与贡献)
@@ -64,22 +65,28 @@ title: 关于我
 
 ---
 
-## 综合项目
+## 综合项目与其他
 
-C语言基础（数据类型、指针、结构体、函数等）。
+综合基础与语言相关笔记。
 
 **📚 章节列表**：
-- 2025年11月10日，[C语言hangman项目，前置要求：C语言基础（数据类型、指针、结构体、函数等）。](/hangmanProject.md)
+- [C++ 基础内容笔记](/basic_content_C%2B%2Bthings)
 
 ---
 
 ## 数据结构与算法
 
 **📚 章节列表**
-- [2026.4.03,dfs and bfs](/data-structure-and-algorithm/bfs%20and%20dfs)
-- [2026.4.03,DoublePointer](/data-structure-and-algorithm/DoublePointer)
-- [2026.4.03,哈希法](/data-structure-and-algorithm/哈希法)
-- [2026.4.03,滑动窗口](/data-structure-and-algorithm/滑动窗口)
+- [DFS and BFS](/data-structure-and-algorithm/bfs%20and%20dfs)
+- [Double Pointer](/data-structure-and-algorithm/DoublePointer)
+- [哈希法](/data-structure-and-algorithm/哈希法)
+- [滑动窗口](/data-structure-and-algorithm/滑动窗口)
+- [回溯算法](/data-structure-and-algorithm/回溯算法)
+- [Algorithms & AI - Overview](/data-structure-and-algorithm/Algorithms%26AI/overview)
+- [Algorithms & AI - Intro](/data-structure-and-algorithm/Algorithms%26AI/algoIntro)
+- [Algorithms & AI - Complexity](/data-structure-and-algorithm/Algorithms%26AI/Complexity)
+- [Algorithms & AI - Factorial & Exponential](/data-structure-and-algorithm/Algorithms%26AI/Factorial%26Exponential)
+- [Algorithms & AI - Sort](/data-structure-and-algorithm/Algorithms%26AI/sortAlgo)
 
 🔗 **参考视频**：[数据结构_王道计算机考研](https://www.bilibili.com/video/BV1b7411N798)
 
@@ -89,7 +96,9 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 **📚 章节列表**
 
-- [2026.2.05,OS basic knowledge](/NotesOfOS.md)
+- [OS 基础知识](/OS/NotesOfOS)
+- [OS Lesson 1](/OS/lesson1)
+- [进程调度 Scheduling](/OS/scheduling)
 
 🔗 **参考视频**：[操作系统_王道计算机考研](https://www.bilibili.com/video/BV1YE411D7nH)
 
@@ -109,15 +118,28 @@ C语言基础（数据类型、指针、结构体、函数等）。
 
 **📚 章节列表**
 
-- [2026.3.12,前四周汇总](/Computer%20Architecture/totalKnowledge)
-
-- [2026.3.28,Pipelining SuperScalar](/Computer%20Architecture/Pipelining%20SuperScalar)
-
-- [2026.3.31,tutorial01](/Computer%20Architecture/tutorial01)
+- [前四周汇总](/Computer%20Architecture/totalKnowledge)
+- [Pipelining SuperScalar](/Computer%20Architecture/Pipelining%20SuperScalar)
+- [tutorial01](/Computer%20Architecture/tutorial01)
+- [总线架构 bus architecture](/Computer%20Architecture/bus_architecture)
+- [I/O 改进与控制方式](/Computer%20Architecture/IO_improvements)
+- [GPGPU 与硬件架构](/Computer%20Architecture/GPU)
 
 🔗 **参考视频**：
 - [【CSAPP-深入理解计算机系统】](https://www.bilibili.com/video/BV1cD4y1D7uR)
 - [计算机组成原理_王道计算机考研](https://www.bilibili.com/video/BV1ps4y1d73V)
+
+---
+
+## 面向对象分析与设计 OOAD
+
+**📚 章节列表**
+
+- [Class Relationship](/OOAD/week4_classRelationship)
+- [UML Relationship & Component](/OOAD/week5_UMLrelationship%26Component)
+- [Package](/OOAD/week6_package)
+- [SOLID, Layers & Sequence](/OOAD/week8_solid%26layers%26sequence)
+- [Threat Modeling](/OOAD/threatModeling)
 
 ---
 
