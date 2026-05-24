@@ -183,17 +183,7 @@ CPU 自动从用户态切换到内核态
 ---
 
 <img width="1112" height="515" alt="image" src="https://github.com/user-attachments/assets/3426e405-65f3-4aae-8f32-3d45ef64c559" />
-<img width="1677" height="1103" alt="image" src="https://github.com/user-attachments/assets/a7eb1287-df3e-4fb8-a4be-213066e89245" />
-<img width="1258" height="1035" alt="image" src="https://github.com/user-attachments/assets/f2eb8bbd-6f78-46bc-8294-d82901ed3561" />
-more processor/less memory
-如果空间不够，需要用到virtual memory
-PCB内容：三个板块
-process 
-context switch：
-CPU registers(user and system)
-process switch VS context switch
 
-前者比后者慢
 <img width="1107" height="474" alt="image" src="https://github.com/user-attachments/assets/129b63f3-d585-406e-b2e8-fe716b3064a3" />
 <img width="870" height="868" alt="image" src="https://github.com/user-attachments/assets/5252d2b3-d052-48e5-950c-ba441e253fe2" />
 <img width="1513" height="1245" alt="image" src="https://github.com/user-attachments/assets/134b3a9c-73ac-42ce-961b-45c9124bc7b5" />

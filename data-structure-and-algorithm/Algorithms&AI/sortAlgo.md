@@ -2,15 +2,7 @@
 layout: default
 ---
 
----
-
-## 1. 排序的应用
-
-**问题**：为什么很多算法要先排序？  
-**笔记**：  
-- 排序后，查找、去重、找第 k 大、找最近数等问题都会变简单。  
-- 排序常作为**预处理步骤**，提升效率。
-
+https://chat.deepseek.com/share/kf8yvtio0n04v480qe
 ---
 
 ## 2. 循环不变式（Loop Invariant）
@@ -98,7 +90,10 @@ layout: default
 原地	不能开新数组
 线性	最多扫几遍，不能嵌套循环
 + quick sort跟partition algo有什么关系呢？
-+ 后者为前者提供一个分界点，好让quick sort分堆。
+  后者为前者提供一个分界点，好让quick sort分堆。
++ 快排的空间复杂度分析
+  best case: S(n)=S(n/2)+1,O(logn)
+  worst case: S(n)=S(n-1)+1,O(n)
 
 ## 9. merge sort
 
@@ -107,6 +102,7 @@ layout: default
 
 空间复杂度：
 $O(logn)+O(n)=O(n)，因为O(n)>>O(logn)$
+没有最好或最坏。
 
 ## 10. 三种简单排序对比（问题驱动）
 
@@ -116,7 +112,6 @@ $O(logn)+O(n)=O(n)，因为O(n)>>O(logn)$
 | 最好时间复杂度 | O(n²) | O(n) | O(n) |
 | 最坏时间复杂度 | O(n²) | O(n²) | O(n²) |
 | 是否稳定？ | 否 | 是 | 是 |
-| 适合场景 | 数据量大但交换成本高 | 数据几乎有序 | 教学演示 |
 
 ---
 
@@ -170,5 +165,4 @@ n−1 次。
   多关键字排序（先按A，再按B）
   ```
   2. In-place:在原数组上进行排序，不需要额外的数组存储数据。cache-friendly: 归并排序合并两个子数组时，数据可能分布在不同的内存区域归并排序。而快排分区时主要访问局部数据，符合 CPU 缓存的局部性原理（spatial locality 和 temporal locality）
-
 

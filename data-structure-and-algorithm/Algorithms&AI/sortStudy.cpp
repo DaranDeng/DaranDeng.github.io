@@ -199,7 +199,7 @@ void quickSort(vector<int> &a, int start, int end){
     quickSort(a,start,p-1);
     quickSort(a,p+1,end);
 }
-/*教材的例子是在partition函数里面决定pivot的选择。但是更好的做法是在quicksort函数决定，如下*/
+/*https://chat.deepseek.com/share/v9pwygsapwo5bhjx9p，教材的例子是在partition函数里面决定pivot的选择。但是更好的做法是在quicksort函数决定，如下*/
 int partition(vector<int> &a, int left, int right,int pivotIdx){
     int i = left + 1, j = right;
     int val = a[pivotIdx];

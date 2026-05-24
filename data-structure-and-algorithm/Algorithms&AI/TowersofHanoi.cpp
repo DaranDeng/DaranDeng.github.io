@@ -16,19 +16,21 @@ void move(int n,char start,char des,char temp){
     move(n-1,temp,des,start);
 }
 
-// ab表示从a移动到b
+// ab表示从a移动到b.S(n)=2*S(n-1)+O(1)。复杂度是指数级。
 string hanoi02(int n, char src, char dst, char aux){
-    if (n == 0)
+    string res = "";
+    if (n != 0)
     {
+        res+=hanoi02(n-1,src,aux,dst);
+        res = res + src;
+        res = res + dst;    
+        //不是res+=hanoi02(1,src,dst,aux);
+        res+=hanoi02(n-1,aux,dst,src);
         return "";
         /* code */
     }
-    string res = "";
+    //else res="";
     // hanoi02(n-1,src,aux,dst);如果这样返回的结果丢失了啊。
-    res+=hanoi02(n-1,src,aux,dst);
-    res = res + src;
-    res = res + dst;
-    res+=hanoi02(n-1,aux,dst,src);
     return res;
 }
 
