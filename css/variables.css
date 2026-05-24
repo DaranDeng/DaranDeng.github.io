@@ -1,0 +1,121 @@
+/* ==============================================
+   DESIGN SYSTEM - CSS VARIABLES
+   Based on Dieter Rams Principles & Swiss Style
+   ============================================== */
+
+:root {
+  /* COLOR SYSTEM - 60-30-10 Rule */
+  
+  /* 60% - Neutral Base (Calm, museum-like environment) */
+  --color-neutral-cream: #F0EFE9;
+  --color-neutral-white: #FFFFFF;
+  
+  /* 30% - Material Definition (Subtle gradients for materials) */
+  --color-material-light: #E8E8E6;
+  --color-material-medium: #D8D8D8;
+  --color-material-dark: #C8C8C8;
+  
+  /* 10% - Functional Accents (Interactive elements ONLY) */
+  --color-accent-primary: #F4793E;    /* Orange - Primary actions */
+  --color-accent-secondary: #3A6B5A;  /* Green - Supporting */
+  --color-accent-tertiary: #2E4A7A;   /* Blue - Information */
+  
+  /* Additional utility colors */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-text-tertiary: #888888;
+  --color-border: #D8D8D8;
+  --color-background: #FFFFFF;
+  --color-background-alt: #F0EFE9;
+  
+  /* TYPOGRAPHY SYSTEM */
+  
+  /* Font Family */
+  --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Georgia', serif;
+  
+  /* Modular Scale (1.25 ratio, 14px base) */
+  --font-size-base: 14px;
+  --font-size-xs: 10px;       /* 14 / 1.25 / 1.25 */
+  --font-size-sm: 11px;       /* 14 / 1.25 */
+  --font-size-md: 16px;       /* 14 * 1.25 */
+  --font-size-lg: 20px;       /* 14 * 1.25 * 1.25 */
+  --font-size-xl: 24px;       /* 14 * 1.25^3 */
+  --font-size-2xl: 30px;      /* 14 * 1.25^4 */
+  --font-size-3xl: 38px;      /* 14 * 1.25^5 */
+  --font-size-4xl: 48px;      /* Section titles */
+  --font-size-5xl: 60px;      /* Hero titles */
+  --font-size-6xl: 75px;      
+  --font-size-7xl: 94px;      /* Large hero */
+  --font-size-8xl: 110px;     /* Max hero */
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.02em;   /* Large text */
+  --letter-spacing-normal: 0;
+  --letter-spacing-loose: 0.05em;    /* Small text for readability */
+  
+  /* Line Height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-baseline: 24px;      /* Baseline grid */
+  
+  /* SPACING SYSTEM (8px base unit) */
+  
+  --space-xs: 4px;      /* 0.5x */
+  --space-sm: 8px;      /* 1x */
+  --space-md: 16px;     /* 2x */
+  --space-lg: 24px;     /* 3x */
+  --space-xl: 32px;     /* 4x */
+  --space-2xl: 48px;    /* 6x */
+  --space-3xl: 64px;    /* 8x */
+  
+  /* GRID SYSTEM */
+  --grid-columns: 12;
+  --grid-column-width: 60px;
+  --grid-gutter: 24px;
+  --grid-margin: 48px;
+  --grid-max-width: 1440px;           /* 12 cols * 60px + 11 gutters * 24px + 2 * 48px margins */
+  
+  /* ELEVATION / SHADOWS */
+  
+  /* Minimal shadows, content creates depth */
+  --shadow-flat: none;
+  --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 8px 32px rgba(0, 0, 0, 0.08);
+  
+  /* BORDER & RADIUS */
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+  --border-width: 1px;
+  
+  /* TRANSITIONS */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-standard: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Z-INDEX */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-tooltip: 600;
+}
+
+/* Dark mode adjustments (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #CCCCCC;
+  }
+}
