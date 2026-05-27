@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <link rel="icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ page.description | default: site.description | default: "Computer Science Learning Resources" }}">
+    <meta name="theme-color" content="#FFFFFF">
+
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="{{ '/css/variables.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/design-system.css' | relative_url }}">
+
+    <title>{{ page.title | default: site.title }}</title>
+
+    <style>
+        /* Additional layout-specific styles */
+        
+        main {
+            display: block;
+        }
+        
+        /* Header Navigation */
+        header {
+            background-color: var(--color-neutral-white);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--space-lg) 0;
+            position: sticky;
+            top: 0;
+            z-index: var(--z-sticky);
+            box-shadow: var(--shadow-subtle);
+        }
+        
+        .header-container {
+            max-width: var(--grid-max-width);
+            margin: 0 auto;
+            padding: 0 var(--grid-margin);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .site-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        
+        .site-title:hover {
+            color: var(--color-accent-primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--space-lg);
+        }
+        
+        nav a {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: all var(--transition-fast);
+            letter-spacing: var(--letter-spacing-loose);
+        }
+        
+        nav a:hover {
+            color: var(--color-accent-primary);
+            border-bottom-color: var(--color-accent-primary);
+        }
+        
+        /* Main Content Area */
+        .main-content {
+            max-width: var(--grid-max-width);
+            margin: 0 auto;
+            padding: var(--space-3xl) var(--grid-margin);
+        }
+        
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: var(--space-2xl);
+        }
+        
+        .page-content {
+            grid-column: 1;
+        }
+        
+        .sidebar {
+            grid-column: 2;
+        }
+        
+        /* Page Headers */
+        .page-header {
+            margin-bottom: var(--space-3xl);
+            padding-bottom: var(--space-2xl);
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .page-title {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-md);
+            color: var(--color-text-primary);
+        }
+        
+        .page-description {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-normal);
+        }
+        
+        /* Article/Post Styles */
+        article {
+            line-height: var(--line-height-normal);
+        }
+        
+        article h2 {
+            margin-top: var(--space-2xl);
+            margin-bottom: var(--space-md);
+        }
+        
+        article h3 {
+            margin-top: var(--space-xl);
+            margin-bottom: var(--space-sm);
+        }
+        
+        article p {
+            margin-bottom: var(--space-md);
+        }
+        
+        article ul,
+        article ol {
+            margin-left: var(--space-lg);
+            margin-bottom: var(--space-md);
+        }
+        
+        article li {
+            margin-bottom: var(--space-sm);
+        }
+        
+        /* Code Blocks */
+        .highlighter-rouge {
+            background-color: var(--color-background-alt);
+            border-radius: var(--border-radius-md);
+            padding: var(--space-md);
+            margin-bottom: var(--space-md);
+            overflow-x: auto;
+        }
+        
+        code {
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: var(--font-size-sm);
+            color: var(--color-accent-tertiary);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--color-background-alt);
+            border-top: 1px solid var(--color-border);
+            padding: var(--space-2xl) 0;
+            margin-top: var(--space-3xl);
+        }
+        
+        .footer-content {
+            max-width: var(--grid-max-width);
+            margin: 0 auto;
+            padding: 0 var(--grid-margin);
+            text-align: center;
+        }
+        
+        .footer-content p {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-sm);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-links a {
+            font-size: var(--font-size-sm);
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background-color: var(--color-background-alt);
+            border-left: 3px solid var(--color-accent-primary);
+            padding: var(--space-md);
+            margin-bottom: var(--space-xl);
+            border-radius: var(--border-radius-md);
+        }
+        
+        .toc > ul {
+            margin-left: 0;
+        }
+        
+        .toc li {
+            list-style: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                grid-column: 1;
+            }
+            
+            .page-title {
+                font-size: var(--font-size-3xl);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: var(--space-2xl) var(--space-lg);
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: var(--space-md);
+                padding: 0 var(--space-lg);
+            }
+            
+            nav ul {
+                gap: var(--space-md);
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .page-title {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .toc {
+                font-size: var(--font-size-sm);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="{{ '/' | relative_url }}" class="site-title">{{ site.title | default: 'DaranDeng' }}</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/README">About</a></li>
+                    <li><a href="https://github.com/DaranDeng" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+            <div class="page-content">
+                {% if page.layout == 'default' and page.title %}
+                <div class="page-header">
+                    <h1 class="page-title">{{ page.title }}</h1>
+                    {% if page.description %}
+                    <p class="page-description">{{ page.description }}</p>
+                    {% endif %}
+                </div>
+                {% endif %}
+                
+                {{ content }}
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/README">About</a>
+                <a href="https://github.com/DaranDeng" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+            <p>&copy; 2026 {{ site.author | default: 'Daran Deng' }}. All rights reserved.</p>
+            <p>Built with care using <a href="https://jekyllrb.com/">Jekyll</a> and systematic design principles.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -3,170 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome</title>
+  <meta name="description" content="DaranDeng's personal portfolio - Computer Science notes and learning journey">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>DaranDeng - Computer Science Learning</title>
+  
+  <!-- Design System CSS -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/design-system.css">
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Landing page specific styles */
+    
     body {
-      font-family: 'Times New Roman', Times, Georgia, serif;
+      background-color: var(--color-neutral-white);
+    }
+    
+    .hero {
+      background: linear-gradient(135deg, var(--color-neutral-white) 0%, var(--color-neutral-cream) 100%);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Background Image - Enhanced Quality */
-    .background {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      filter: brightness(1.1) contrast(1.05);
-    }
-
-    /* Content Container */
-    .container {
-      text-align: center;
-      color: white;
-      padding: 4rem;
-      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-    }
-
-    .main-text {
-      font-size: 8rem;
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 1.5rem;
-      letter-spacing: 12px;
-      text-transform: uppercase;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    .author {
-      font-size: 2.5rem;
-      font-weight: 400;
-      margin-bottom: 5rem;
-      letter-spacing: 6px;
-      opacity: 0.95;
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-    }
-
-    .btn {
-      padding: 1.4rem 4rem;
-      font-size: 1.2rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      font-weight: 500;
-      text-decoration: none;
-      display: inline-block;
-      outline: none;
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-      font-family: 'Times New Roman', Times, serif;
-      letter-spacing: 1px;
       position: relative;
       overflow: hidden;
-      text-transform: uppercase;
     }
-
-    .btn::before {
+    
+    /* Subtle decorative background pattern */
+    .hero::before {
       content: '';
       position: absolute;
       top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.5s;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--color-material-light) 0%, transparent 70%);
+      opacity: 0.15;
+      z-index: 0;
     }
-
-    .btn:hover::before {
-      left: 100%;
+    
+    .hero-wrapper {
+      position: relative;
+      z-index: 1;
+      text-align: center;
     }
-
-    .btn:hover {
-      background: rgba(255, 255, 255, 0.15);
-      border-color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    
+    .hero-title {
+      font-size: var(--font-size-8xl);
+      font-weight: var(--font-weight-bold);
+      line-height: 1.1;
+      margin-bottom: var(--space-lg);
+      color: var(--color-text-primary);
+      letter-spacing: var(--letter-spacing-tight);
     }
-
-    /* Responsive */
+    
+    .hero-byline {
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-regular);
+      color: var(--color-text-secondary);
+      margin-bottom: var(--space-3xl);
+      letter-spacing: 2px;
+    }
+    
+    .hero-actions {
+      display: flex;
+      gap: var(--space-lg);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .nav-link {
+      display: inline-block;
+      padding: var(--space-sm) var(--space-md);
+      margin: 0 var(--space-sm);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all var(--transition-fast);
+      font-size: var(--font-size-sm);
+      letter-spacing: var(--letter-spacing-loose);
+    }
+    
+    .nav-link:hover {
+      color: var(--color-accent-primary);
+      border-bottom: 1px solid var(--color-accent-primary);
+    }
+    
+    /* Responsive adjustments */
     @media (max-width: 1024px) {
-      .main-text {
-        font-size: 6rem;
-        letter-spacing: 8px;
+      .hero-title {
+        font-size: var(--font-size-6xl);
       }
-
-      .author {
-        font-size: 2rem;
-      }
-
-      .btn {
-        padding: 1.3rem 3.5rem;
-        font-size: 1.1rem;
+      
+      .hero-byline {
+        font-size: var(--font-size-xl);
       }
     }
-
+    
     @media (max-width: 768px) {
-      .container {
-        padding: 2rem;
+      .hero {
+        min-height: auto;
+        padding: var(--space-2xl) var(--space-lg);
       }
-
-      .main-text {
-        font-size: 4rem;
-        letter-spacing: 6px;
+      
+      .hero::before {
+        width: 400px;
+        height: 400px;
       }
-
-      .author {
-        font-size: 1.5rem;
-        margin-bottom: 3rem;
+      
+      .hero-title {
+        font-size: var(--font-size-5xl);
+        margin-bottom: var(--space-md);
       }
-
-      .buttons {
+      
+      .hero-byline {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--space-xl);
+      }
+      
+      .hero-actions {
+        gap: var(--space-md);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: var(--font-size-4xl);
+      }
+      
+      .hero-byline {
+        font-size: var(--font-size-md);
+      }
+      
+      .hero-actions {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: var(--space-md);
       }
-
+      
       .btn {
-        width: 280px;
-        padding: 1.2rem 3rem;
-        font-size: 1rem;
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Background Image - Enhanced Quality -->
-  <img src="background2.jpg" alt="Background" class="background">
-
-  <!-- Content -->
-  <div class="container">
-    <h1 class="main-text">Forever Revolutionary<br>Forever Young</h1>
-    <p class="author">DAVID SENSEI</p>
-    
-    <div class="buttons">
-      <a href="/README" class="btn">ENTER THE WORLD →</a>
-      <a href="https://github.com/DaranDeng" class="btn">GITHUB PROFILE</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-wrapper container">
+      <h1 class="hero-title">Daran Deng</h1>
+      <p class="hero-byline">Computer Science Learning Journey</p>
+      
+      <div class="hero-actions">
+        <a href="/README" class="btn btn-primary">Explore My Notes</a>
+        <a href="https://github.com/DaranDeng" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+      </div>
     </div>
-  </div>
+  </section>
 </body>
 </html>
