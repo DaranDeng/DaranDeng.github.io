@@ -46,7 +46,7 @@ limited by processing power or by external events(I/O)
 
 2. **Round Robin (RR，时间片轮转法)**: 只有ready和running两种状态
    - 抢占式
-   - 运行一个时间片
+   - 运行一个时间片,quantum是什么？分配到每个进程的时间片。
    - 用户友好，可以运行多个进程
    - 优化:加一个阻塞队列，把复杂度从O(n)降到O(1)？
 
@@ -86,10 +86,11 @@ limited by processing power or by external events(I/O)
 
 3. **SJF**
    - 必须先知道各进程的运行所需时间片，然后选择最短时间的先运行。
+   - 主要问题是长进程可能寄饿
    - 抢占式
 
 4. **shortest remaining time**
-   - 真实情况中进程们并不是同时到达，那么如果采用FCFS算法，必须是按照到达的先后顺序来进行直到把某个进程运行完。但是采用SRT，可以减少average waiting time
+   - 真实情况中进程们并不是同时到达，那么如果采用FCFS算法，必须是按照到达的先后顺序来进行直到把某个进程运行完。但是采用SRT，可以减少average waiting time，显然抢占式
 
 ## 考点
  学会画各种调度算法的甘特图并根据图计算平均等待时间。注意：若某个进程A=3，说明到达时刻是3.那么之前的进程是已经运行了3个时间片。因为是从0时刻到达。

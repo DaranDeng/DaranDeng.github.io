@@ -80,13 +80,30 @@ small,
   font-size: var(--font-size-sm);
 }
 
-code,
-pre {
+pre,
+code {
   font-family: 'Monaco', 'Courier New', monospace;
   font-size: var(--font-size-sm);
+}
+
+code {
   background-color: var(--color-background-alt);
-  padding: var(--space-xs) var(--space-sm);
+  padding: 1px 6px;
+  border-radius: var(--border-radius-sm);
+  line-height: 1.2;
+}
+
+pre {
+  background-color: var(--color-background-alt);
+  padding: var(--space-sm);
   border-radius: var(--border-radius-md);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  line-height: inherit;
 }
 
 /* LINKS */
