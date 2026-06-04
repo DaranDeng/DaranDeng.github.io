@@ -88,9 +88,11 @@ code {
 
 code {
   background-color: var(--color-background-alt);
-  padding: 1px 6px;
+  font-size: var(--font-size-xs);
+  padding: 0 4px;
   border-radius: var(--border-radius-sm);
-  line-height: 1.2;
+  line-height: 1.1;
+  vertical-align: baseline;
 }
 
 pre {
