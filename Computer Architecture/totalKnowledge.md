@@ -1,40 +1,49 @@
 ---
 layout: default
-title: 前四周汇总
+title: 计算机组成原理总览
 ---
 
+# Principles of Computer Composition 总览
 
+## 模块主线
 
-模块 2：流水线
-解决什么问题？
-传统线性的指令效率太低，解决这个问题
-基本结构（5 级 / 更多级）？
+1. Memory hierarchy & Cache
+2. Cache mapping / updating / coherence
+3. Pipelining & Superscalar
+4. I/O improvements
+5. Bus architectures
+6. GPGPU & GPU scheduling
 
-冲突类型与解决？
+## 期末常考的总逻辑
 
-分支预测怎么做的？
+- **Cache** 解决 memory wall
+- **Pipeline** 提高 instruction-level parallelism ILP
+- **Superscalar / Out-of-order** 进一步挖掘并行度
+- **I/O + DMA** 减少 CPU 等待外设
+- **Bus hierarchy** 解决高速设备接入问题
+- **GPU / SIMT** 解决大规模数据并行
 
-模块 3：超标量 + 乱序
-解决什么问题？
-尽管有了流水线，但是还是会有多个执行单元空闲的情况。超标量和乱序都是为了提高指令级并行（ILP），让 CPU 在一个时钟周期内尽量做更多事情。
-超标量（Superscalar）：一个周期可以发射多条指令。
-乱序执行（Out-of-Order）：不严格按程序顺序执行，只要操作数就绪就先执行。
+## 考试答题模板
 
-发射、重命名、窗口、ROB 分别干什么？
-窗口就是：
-乱序处理器里暂时存放很多条待执行指令的地方。
-CPU 可以从窗口里挑选“已经准备好”的指令优先执行。
+如果老师问“为什么要这样设计”，通常按这三步答：
 
-ROB（Reorder Buffer，重排序缓冲区）
+1. 先说瓶颈是什么
+2. 再说硬件怎么解决
+3. 最后说代价是什么
 
-和流水线的关系是什么？
-超标量和乱序执行不是替代流水线，而是在流水线基础上的优化策略。流水线负责把指令分阶段处理，超标量负责一个周期发射多条，乱序负责在不破坏依赖的前提下尽量让执行单元不空闲。
+## 关键词速记
 
-为什么“顺序提交”很重要？
-顺序提交的重要性：
+- von Neumann bottleneck
+- locality of reference
+- cache hit / miss
+- direct mapping / fully-associative / set-associative
+- write-through / write-back
+- coherence / MESI
+- pipeline / hazard
+- RAW / WAR / WAW
+- branch prediction
+- superscalar / out-of-order
+- polling / interrupt / DMA
+- bus hierarchy / arbitration
+- warp / SIMT / branch divergence
 
-防止后面的错误结果先写入架构状态。
-
-防止异常、分支预测错误、访存失败等情况导致程序状态混乱。
-
-保证程序员看到的行为仍符合原始代码顺序。

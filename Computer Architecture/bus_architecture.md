@@ -3,51 +3,102 @@ layout: default
 title: bus architecture
 ---
 
----
+# 总线架构 Bus Architectures
 
-## 你的回答 vs 标准理解对照
+## 1. 总线是什么?
 
-### ✅ 第2点：为什么早期一条总线会慢？
-> 因为慢设备会拖累快设备
+Bus is a pathway that inter-connects two or more components in a computer.
 
-**完全正确**，这就是“总线阻塞”的根本原因。
+**关键词**
+- Address bus
+- Data bus
+- Control bus
 
-### ✅ 第3点：总线层次结构是怎么解决这个问题的？
-> 分为很多种总线，快设备与快的相连
+[Figure 1: 总线由三类信号线组成]
 
-对，更精确地说：  
-- **快 ↔ 快**（CPU ↔ 缓存/内存）  
-- **中 ↔ 中**（显卡、硬盘）  
-- **慢 ↔ 慢**（键盘、鼠标）  
-- 中间用**桥片**连接
+## 2. 为什么早期总线会变慢?
 
-### ✅ 第4点：PCI 比 ISA 好在哪？
-> CPU独立于总线，用桥片与总线连接，换CPU不需要换掉总线
+**原因**
+- 设备越来越多
+- 设备速度差异越来越大
+- 广播式总线上的冲突和干扰越来越严重
 
-**非常精准**，这正是 PCI 设计的关键优点：**CPU 无关性**。
+**课件的答案方向**
+- 分层总线 hierarchy
+- 更快的 bus 靠近 CPU / cache
+- 更慢的 bus 服务外设
 
-### 🔸 第5点：为什么从并行 → 串行点对点？
-> 总线之间有干扰，可能是电磁那些，难以让不同总线中的信号同步。点对点就相当于专门给某两个设备提供的总线，不受干扰。
+## 3. 总线分层 Bus hierarchy
 
-你抓住了**两个关键点**：
-1. **电磁干扰**（并行总线线多、频率高时信号会互相串扰）
-2. **同步困难**（多条线同时传，长度差几毫米都会导致信号到达时间不同）
+### 1980s 结构
+- System bus
+- Local bus
+- Expansion bus
 
-我帮你**精确一下术语**：
-- 早期的串行，一根线传数据，一次传 1 位。速度很慢（每秒几千到几十千位）
-- 并行总线的问题叫 **信号偏移（skew）** 和 **串扰（crosstalk）**
-- 点对点串行虽然每次只传 1 位，但可以跑**极高频率**，不是共享总线：每个设备有自己专用的线路，不跟别人抢。
+### 1990s 之后
+- High-speed bus 作为中间层
+- Bridge chip 连接不同层级
 
-> 你的比喻“专门给某两个设备提供的总线”非常好，可以再加一句：  
-> **而且多个点对点连接可以同时工作**，不像并行总线一次只能一个设备发言。
+[Figure 2: bus hierarchy 演化图]
 
-### 🔸 第6点：现代总线架构追求什么？
-> 快，成本低
+**考点**
+- 会画出“CPU / cache / main memory / high-speed bus / expansion bus”的层次关系
+- 会解释 bridge chip 的作用
 
-**对，但可以更完整一点**：  
-> 追求 **快 + 可扩展 + 低成本 + 兼容**，但在冲突时 **快优先**，哪怕更复杂也可以接受。
+## 4. 常见总线标准
 
-PPT 最后一页说的就是：  
-> “All of these make our system more complex, but that’s OK if it’s faster, because **It’s all about speed!**”
+### ISA
+- 早期扩展总线
+- 速度慢，但兼容性好
 
----
+### PCI
+- Peripheral Component Interconnect
+- CPU independent
+- 支持 bus master 和 arbitration
+- 可以进行 block transfer
+
+### AGP
+- 专门为图形场景优化
+- 点对点连接
+
+### USB
+- Universal Serial Bus
+- hot-swappable
+- 外设通用接口
+
+### PCIe
+- PCI Express
+- lane-based serial point-to-point
+- 取代 PCI / AGP 的主流方案
+
+### SATA
+- Serial ATA
+- 面向存储设备
+
+[Figure 3: PCI / AGP / USB / PCIe / SATA 的位置关系]
+
+## 5. 总线仲裁 Arbitration
+
+多个 bus master 同时请求总线时，需要 arbitration scheme。
+
+常见策略：
+- First-come-first-served
+- Round robin
+- Priority
+
+**考点**
+- 谁是 bus master
+- 为什么 DMA 也能抢总线
+- arbitration 是为了避免冲突
+
+## 6. 现代趋势
+
+**关键变化**
+- 从 parallel bus 转向 serial point-to-point
+- 从共享总线转向更细粒度的互连
+- 从“一个大广播总线”转向“分层 + 交换网络”
+
+**为什么?**
+- 高速下 parallel bus 更容易受 skew / crosstalk 影响
+- serial link 更容易做高速和长距离传输
+
