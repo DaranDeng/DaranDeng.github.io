@@ -81,7 +81,7 @@ https://chat.deepseek.com/share/kf8yvtio0n04v480qe
 ## 8. quick sort and partition algo
 + 已知pivot 在数组中的起始位置和元素值，通过partition algorithm这个算法可以让pivot到达一个特定的位置，这个位置满足：pivot 左边都 ≤ pivot，右边都 ≥ pivot。
 + 为什么partition一定要这么复杂，直接排序随便取一个数都满足左边的数小右边的数大呀，这个到底在解决什么？
-+ 本身就是在随便取一个数pivot，这个算法是在对数组进行调整，满足特定关系。当然，quick sort取数的不同会带来复杂度的不同。比如每次都取最中间，就会带来 $O(nlogn) 的best case;每次都依次按顺序取，就会带来   $O(n^2) 的worst case。👉 Merge Sort 从中间分是为了结构简单和递归均衡，而不是为了优化复杂度；
++ 本身就是在随便取一个数pivot，这个算法是在对数组进行调整，满足特定关系。当然，quick sort取数的不同会带来复杂度的不同。比如每次都取最中间，就会带来 $O(n \log n)$ 的 best case；每次都依次按顺序取，就会带来 $O(n^2)$ 的 worst case。👉 Merge Sort 从中间分是为了结构简单和递归均衡，而不是为了优化复杂度；
 👉 Quick Sort 才是那个“分得好不好直接决定复杂度”的算法
 + Partition 的唯一目标
 给定一个 pivot 值（比如选第一个元素），找到它最终应该在数组中的下标，并把数组调整成：左边都 ≤ pivot，右边都 ≥ pivot。
@@ -92,8 +92,8 @@ https://chat.deepseek.com/share/kf8yvtio0n04v480qe
 + quick sort跟partition algo有什么关系呢？
   后者为前者提供一个分界点，好让quick sort分堆。
 + 快排的空间复杂度分析
-  best case: S(n)=S(n/2)+1,O(logn)
-  worst case: S(n)=S(n-1)+1,O(n)
+  best case: $S(n)=S(n/2)+1,\ O(\log n)$
+  worst case: $S(n)=S(n-1)+1,\ O(n)$
 
 ## 9. merge sort
 
@@ -101,13 +101,13 @@ https://chat.deepseek.com/share/kf8yvtio0n04v480qe
 ![alt text]({8C5000D8-4497-4059-BB64-44F3815E9282}.png)
 
 空间复杂度：
-$O(logn)+O(n)=O(n)，因为O(n)>>O(logn)$
+$O(\log n)+O(n)=O(n)$，因为 $O(n) \gg O(\log n)$
 没有最好或最坏。
 
 ## 10. 三种简单排序对比（问题驱动）
 
 | 问题 | 选择排序 | 插入排序 | 冒泡排序 |
-|------|----------|----------|----------|
+| :--- | :--- | :--- | :--- |
 | 是否与输入顺序有关？ | 否 | 是 | 是（优化后） |
 | 最好时间复杂度 | O(n²) | O(n) | O(n) |
 | 最坏时间复杂度 | O(n²) | O(n²) | O(n²) |
@@ -165,4 +165,3 @@ n−1 次。
   多关键字排序（先按A，再按B）
   ```
   2. In-place:在原数组上进行排序，不需要额外的数组存储数据。cache-friendly: 归并排序合并两个子数组时，数据可能分布在不同的内存区域归并排序。而快排分区时主要访问局部数据，符合 CPU 缓存的局部性原理（spatial locality 和 temporal locality）
-

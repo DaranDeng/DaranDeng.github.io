@@ -16,6 +16,19 @@
 
     <title>{{ page.title | default: site.title }}</title>
 
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         /* Additional layout-specific styles */
         
@@ -115,7 +128,53 @@
             color: var(--color-text-secondary);
             line-height: var(--line-height-normal);
         }
-        
+
+        .page-nav-button {
+            position: fixed;
+            top: 96px;
+            z-index: var(--z-sticky);
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            max-width: 220px;
+            padding: var(--space-sm) var(--space-md);
+            background-color: var(--color-neutral-white);
+            border: 1px solid var(--color-border);
+            border-radius: 999px;
+            box-shadow: var(--shadow-subtle);
+            color: var(--color-text-primary);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .page-nav-button:hover {
+            border-color: var(--color-accent-primary);
+            color: var(--color-accent-primary);
+            transform: translateY(-1px);
+        }
+
+        .page-nav-prev {
+            left: 16px;
+        }
+
+        .page-nav-next {
+            right: 16px;
+        }
+
+        .page-nav-arrow {
+            font-size: var(--font-size-lg);
+            line-height: 1;
+            flex: 0 0 auto;
+        }
+
+        .page-nav-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+        }
+
         /* Article/Post Styles */
         article {
             line-height: var(--line-height-normal);
@@ -249,6 +308,16 @@
             .toc {
                 font-size: var(--font-size-sm);
             }
+
+            .page-nav-button {
+                top: 72px;
+                max-width: 120px;
+                padding: var(--space-sm);
+            }
+
+            .page-nav-text {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -266,6 +335,35 @@
             </nav>
         </div>
     </header>
+
+    {% assign nav_pages = site.pages | where_exp: "item", "item.path contains '.md' and item.path != 'README.md' and item.layout == 'default'" | sort: "path" %}
+    {% assign prev_page = '' %}
+    {% assign next_page = '' %}
+    {% assign found_current = false %}
+    {% for item in nav_pages %}
+        {% if item.url == page.url %}
+            {% assign found_current = true %}
+        {% elsif found_current == false %}
+            {% assign prev_page = item %}
+        {% elsif next_page == '' %}
+            {% assign next_page = item %}
+        {% endif %}
+    {% endfor %}
+
+    {% if page.path and page.path contains '.md' and page.path != 'README.md' %}
+        {% if prev_page != '' %}
+        <a class="page-nav-button page-nav-prev" href="{{ prev_page.url | relative_url }}" aria-label="上一篇：{{ prev_page.title }}">
+            <span class="page-nav-arrow">←</span>
+            <span class="page-nav-text">{{ prev_page.title }}</span>
+        </a>
+        {% endif %}
+        {% if next_page != '' %}
+        <a class="page-nav-button page-nav-next" href="{{ next_page.url | relative_url }}" aria-label="下一篇：{{ next_page.title }}">
+            <span class="page-nav-text">{{ next_page.title }}</span>
+            <span class="page-nav-arrow">→</span>
+        </a>
+        {% endif %}
+    {% endif %}
 
     <!-- Main Content -->
     <main class="main-content">
