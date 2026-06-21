@@ -91,18 +91,21 @@ https://chat.deepseek.com/share/kf8yvtio0n04v480qe
 线性	最多扫几遍，不能嵌套循环
 + quick sort跟partition algo有什么关系呢？
   后者为前者提供一个分界点，好让quick sort分堆。
++ 分堆算法，时间$O(n)$,一个while大循环，两个小循环。空间$O(1)$
 + 快排的空间复杂度分析
   best case: $S(n)=S(n/2)+1,\ O(\log n)$
   worst case: $S(n)=S(n-1)+1,\ O(n)$
-
++ 时间复杂度分析
+  $T(n)=T(n/2)+O(n),\ O(nlog n)$;
+  $T(n)=T(n-1)+O(n),\ O(n^2)$
 ## 9. merge sort
 
 时间复杂度：
 ![alt text]({8C5000D8-4497-4059-BB64-44F3815E9282}.png)
-
+怎么算的？注意要把$O(n)$当成n来算
 空间复杂度：
 $O(\log n)+O(n)=O(n)$，因为 $O(n) \gg O(\log n)$
-没有最好或最坏。
+没有最好或最坏。当然如果merge函数没有开辟临时数组，那么空间复杂度就是递归栈深度为$O(\log n)$
 
 ## 10. 三种简单排序对比（问题驱动）
 

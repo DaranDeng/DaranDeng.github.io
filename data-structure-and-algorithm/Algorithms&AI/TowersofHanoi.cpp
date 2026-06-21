@@ -23,10 +23,10 @@ string hanoi02(int n, char src, char dst, char aux){
     {
         res+=hanoi02(n-1,src,aux,dst);
         res = res + src;
-        res = res + dst;    
+        res = res + dst;
+        //不写成res+='A'+'C';因为输入没给这个。    
         //不是res+=hanoi02(1,src,dst,aux);
         res+=hanoi02(n-1,aux,dst,src);
-        return "";
         /* code */
     }
     //else res="";
@@ -43,7 +43,6 @@ std::string hanoi(int n, char src, char dst, char aux) {
     res += hanoi(n-1, src, aux, dst);  // 关键：接收返回值
     res += src;
     res += dst;
-    res += " ";  // 添加分隔符，便于阅读
     res += hanoi(n-1, aux, dst, src);  // 关键：接收返回值
     
     return res;
