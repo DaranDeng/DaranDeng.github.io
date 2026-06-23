@@ -76,6 +76,42 @@ title: UML与组件图
 - **替代方案**：**组合（Composition）**  
   组合是 **“has-a”** 关系  
   比如：`Employee` **有** `Salary` 支付方式，而不是继承
+不是一个东西，但关系很近。
+
+---
+
+### 9. UML VS class diagram
+- `UML` 是一整套建模语言，全名是 `Unified Modeling Language`。
+- `类图` 是 `UML` 里面的一种图，专门用来描述类、属性、方法，以及类之间的关系。
+
+所以可以理解成：
+
+- `UML` = “整套语法和图谱”
+- `类图` = “其中一张图”
+
+
+- `11. Class Relationship.pdf` 里的内容，大概率就是在讲类之间的关系，这些基本都能直接用到类图里。
+- `12. UML Relationships.pdf` 里的内容，通常更广，可能讲的是 UML 里各种关系表示法，其中很多也会出现在类图中，但不一定全是类图专属。
+
+一般来说，下面这些关系都能画进类图里：
+
+- 关联 `association`
+- 单向关联 `navigability`
+- 聚合 `aggregation`
+- 组合 `composition`
+- 继承/泛化 `generalization`
+- 实现 `realization`
+- 依赖 `dependency`
+
+但要注意：
+
+- 有些 `UML` 的关系不一定只属于类图，也可能出现在用例图、时序图等别的图里。
+- 类图更关注“静态结构”，不是所有 UML 内容都适合直接往类图里塞。
+
+一句话总结：
+
+- `UML` 不是类图，但类图是 UML 的一种。
+- 你这两份讲义里，跟“类与类之间关系”有关的内容，绝大多数都能用于类图。
 
 ---
 

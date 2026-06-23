@@ -336,7 +336,7 @@
         </div>
     </header>
 
-    {% assign nav_pages = site.pages | where_exp: "item", "item.path contains '.md' and item.path != 'README.md' and item.layout == 'default'" | sort: "path" %}
+    {% assign nav_pages = site.pages | where_exp: "item", "item.path contains '.md'" | where_exp: "item", "item.path != 'README.md'" | where_exp: "item", "item.layout == 'default'" | sort: "path" %}
     {% assign prev_page = '' %}
     {% assign next_page = '' %}
     {% assign found_current = false %}
