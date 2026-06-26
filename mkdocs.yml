@@ -1,0 +1,120 @@
+site_name: DaranDeng
+site_description: Computer Science learning notes
+site_author: Daran Deng
+site_url: https://darandeng.github.io/
+
+repo_name: DaranDeng/DaranDeng.github.io
+repo_url: https://github.com/DaranDeng/DaranDeng.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+nav:
+  - Home: index.md
+  - About: README/index.md
+  - Data Structures and Algorithms:
+      - Overview: ds-algorithm/index.md
+      - C++ Basics: ds-algorithm/cpp-basics.md
+      - BFS and DFS: ds-algorithm/bfs and dfs.md
+      - Double Pointer: ds-algorithm/DoublePointer.md
+      - Sliding Window: ds-algorithm/滑动窗口.md
+      - Backtracking: ds-algorithm/回溯算法.md
+      - Hashing: ds-algorithm/哈希法.md
+      - Algorithms and AI:
+          - Overview: ds-algorithm/Algorithms&AI/overview.md
+          - Introduction: ds-algorithm/Algorithms&AI/algoIntro.md
+          - Complexity: ds-algorithm/Algorithms&AI/Complexity.md
+          - Factorial and Exponential: ds-algorithm/Algorithms&AI/Factorial&Exponential.md
+          - Sort Algorithms: ds-algorithm/Algorithms&AI/sortAlgo.md
+          - UFS and IFS: ds-algorithm/Algorithms&AI/UFS&IFS.md
+  - Operating System:
+      - Overview: os/index.md
+      - Basic API: os/BasicAPI.md
+      - Notes: os/NotesOfOS.md
+      - Lesson 1: os/lesson1.md
+      - Process: os/process.md
+      - Scheduling: os/scheduling.md
+      - Concurrency: os/concurrency.md
+      - Memory Management: os/memoryManagement.md
+      - Disk I/O: os/diskIO.md
+      - Hard Disk and RAID: os/Harddisk&RAID.md
+  - Computer Architecture:
+      - Overview: computer-architecture/index.md
+      - Total Knowledge: computer-architecture/totalKnowledge.md
+      - Tutorial 01: computer-architecture/tutorial01.md
+      - Cache: computer-architecture/cache.md
+      - Pipelining Superscalar: computer-architecture/Pipelining SuperScalar.md
+      - Bus Architecture: computer-architecture/bus_architecture.md
+      - I/O Improvements: computer-architecture/IO_improvements.md
+      - GPU: computer-architecture/GPU.md
+  - OOAD:
+      - Overview: ooad/index.md
+      - Class Relationship: ooad/week4_classRelationship.md
+      - UML Relationship and Component: ooad/week5_UMLrelationship&Component.md
+      - Package: ooad/week6_package.md
+      - SOLID Layers and Sequence: ooad/week8_solid&layers&sequence.md
+      - Threat Modeling: ooad/threatModeling.md
+      - Observer: ooad/observer.md
+  - Engineering Notes:
+      - Overview: engineering-notes/index.md
+      - Log Knowledge: engineering-notes/log-knowledge.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+extra_css:
+  - _static/css/extra.css
+
+extra_javascript:
+  - _static/js/extra.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+
+exclude_docs: |
+  superpowers/*

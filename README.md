@@ -1,153 +1,30 @@
----
-layout: default
-title: 计算机学习
----
+# DaranDeng.github.io
 
-# 前言
+This repository contains a MkDocs Material documentation site for computer science learning notes.
 
-这个仓库是我学习计算机基础课程的**完整记录与思考沉淀**。学习始于2025年秋，至今仍在更新。我坚信**费曼学习法**的力量——最好的理解，就是能把它清晰地讲给别人听。因此，这里的每一份笔记、每一张插图，都是我力求将复杂概念“内化”后，再“输出”的成果。
+## Local Development
 
-如果你是中南邓迪正在自学计算机的朋友，希望这份“学习路径与内容”能为你点亮一盏灯，少走一些弯路。
+Install dependencies:
 
----
+```powershell
+python -m pip install -r requirements.txt
+```
 
-# 目录
-- [前言](#前言)
-- [目录](#目录)
-- [文档概览：四门基础课](#文档概览四门基础课)
-  - [综合项目与其他](#综合项目与其他)
-  - [数据结构与算法](#数据结构与算法)
-  - [操作系统 Operating System](#操作系统-operating-system)
-  - [计算机网络 Computer Network](#计算机网络-computer-network)
-  - [计算机组成原理 Principles of Computer Composition](#计算机组成原理-principles-of-computer-composition)
-  - [面向对象分析与设计 OOAD](#面向对象分析与设计-ooad)
-- [推荐学习路线](#推荐学习路线)
-- [关于本仓库与贡献](#关于本仓库与贡献)
-- [与我联系](#与我联系)
-- [最后，送你一卦](#最后送你一卦)
+Run the local server:
 
----
+```powershell
+mkdocs serve
+```
 
-# 文档概览：四门基础课
+Build the site:
 
-本仓库的核心内容围绕计算机四大支柱展开。建议按照 **「数据结构和算法 -> 操作系统 -> 计算机网络 -> 计算机组成原理」** 的顺序学习，但也不必拘泥，它们之间常有交叉，融会贯通方见其妙。
+```powershell
+mkdocs build --strict
+```
 
-**📊 当前进度总览**
+## Structure
 
-| 课程 | 📃文档 | ✍🏻字数 | 🌄插图 | ✏️当前进度 |
-| :--- | :--- | :--- | :--- | :--- |
-| ✅ 数据结构和算法 | 40 | 180k | 350 | ◾◾◾◾◾◾◾◽◽◽ (70%) |
-| ✅ 操作系统 | 16 | 120k | 170 | ◾◾◾◾◾◾◾◾◽◽ (80%) |
-| ⏳ 计算机网络 | - | - | - | ◽◽◽◽◽◽◽◽◽◽ (0%) |
-| ⏳ 计算机组成原理 | - | - | - | ◽◽◽◽◽◽◽◽◽◽ (0%) |
-
-*注：文档、字数、插图等数据持续更新中，此表反映的是截至2026年初的累积成果。*
-
----
-
-## 综合项目与其他
-
-综合基础与语言相关笔记。
-
-**📚 章节列表**：
-- [C++ 基础内容笔记](/basic_content_C%2B%2Bthings)
-
----
-
-## 数据结构与算法
-
-**📚 章节列表**
-- [DFS and BFS](/data-structure-and-algorithm/bfs%20and%20dfs)
-- [Double Pointer](/data-structure-and-algorithm/DoublePointer)
-- [哈希法](/data-structure-and-algorithm/哈希法)
-- [滑动窗口](/data-structure-and-algorithm/滑动窗口)
-- [回溯算法](/data-structure-and-algorithm/回溯算法)
-- [Algorithms & AI - Overview](/data-structure-and-algorithm/Algorithms%26AI/overview)
-- [Algorithms & AI - Intro](/data-structure-and-algorithm/Algorithms%26AI/algoIntro)
-- [Algorithms & AI - Complexity](/data-structure-and-algorithm/Algorithms%26AI/Complexity)
-- [Algorithms & AI - Factorial & Exponential](/data-structure-and-algorithm/Algorithms%26AI/Factorial%26Exponential)
-- [Algorithms & AI - Sort](/data-structure-and-algorithm/Algorithms%26AI/sortAlgo)
-
-🔗 **参考视频**：[数据结构_王道计算机考研](https://www.bilibili.com/video/BV1b7411N798)
-
----
-
-## 操作系统 Operating System
-
-**📚 章节列表**
-
-- [OS 基础知识](/OS/NotesOfOS)
-- [OS Lesson 1](/OS/lesson1)
-- [进程调度 Scheduling](/OS/scheduling)
-
-🔗 **参考视频**：[操作系统_王道计算机考研](https://www.bilibili.com/video/BV1YE411D7nH)
-
----
-
-## 计算机网络 Computer Network
-
-> （施工中...）
-
-🔗 **参考视频**：
-- [计算机网络微课堂（湖科大教书匠）](https://www.bilibili.com/video/BV1c4411d7jb)
-- [计算机网络_王道计算机考研](https://www.bilibili.com/video/BV19E411D78Q)
-
----
-
-## 计算机组成原理 Principles of Computer Composition
-
-**📚 章节列表**
-
-- [前四周汇总](/Computer%20Architecture/totalKnowledge)
-- [Pipelining SuperScalar](/Computer%20Architecture/Pipelining%20SuperScalar)
-- [tutorial01](/Computer%20Architecture/tutorial01)
-- [总线架构 bus architecture](/Computer%20Architecture/bus_architecture)
-- [I/O 改进与控制方式](/Computer%20Architecture/IO_improvements)
-- [GPGPU 与硬件架构](/Computer%20Architecture/GPU)
-
-🔗 **参考视频**：
-- [【CSAPP-深入理解计算机系统】](https://www.bilibili.com/video/BV1cD4y1D7uR)
-- [计算机组成原理_王道计算机考研](https://www.bilibili.com/video/BV1ps4y1d73V)
-
----
-
-## 面向对象分析与设计 OOAD
-
-**📚 章节列表**
-
-- [Class Relationship](/OOAD/week4_classRelationship)
-- [UML Relationship & Component](/OOAD/week5_UMLrelationship%26Component)
-- [Package](/OOAD/week6_package)
-- [SOLID, Layers & Sequence](/OOAD/week8_solid%26layers%26sequence)
-- [Threat Modeling](/OOAD/threatModeling)
-
----
-
-# 推荐学习路线
-
-建议学习过程：
-
-**数据结构和算法** -> **计算机操作系统** -> **计算机网络** -> **计算机组成原理**
-
-当然，这并非铁律。它们彼此之间内容有所交叠，例如学操作系统时会需要数据结构的知识，学网络时会用到操作系统的进程概念。**带着问题去学习，在交叉中加深理解，效果往往更好。**
-
-
-# 关于本仓库与贡献
-
-- **编辑工具**：本文档采用 markdown和 VSCode 编写，以实现更好的结构化展示与链接跳转。
-- **贡献指南**：请参考 [CONTRIBUTING.md](CONTRIBUTING.md)
-
-# 与我联系
-
--   **邮箱**：`312732962@qq.com`
--   **ins**：[@DengDaran](https://www.instagram.com/DengDaran/)
-
----
-
-# 最后，送你一卦
-
-> **《易经·乾卦》九五**：**飞龙在天，利见大人。**
-> 
-> *爻辞释义：龙飞高空，利于出现大人物。象征时机成熟，可大展宏图。*
-
-愿你我都能在各自的命途中，**乘风好去，长空万里，直下看山河**。
+- `docs/`: published notes, examples, and site assets
+- `docs/_static/`: custom CSS and JavaScript
+- `archive/`: preserved legacy files and generated binaries that are not published
+- `mkdocs.yml`: site configuration and navigation
