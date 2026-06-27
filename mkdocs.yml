@@ -11,71 +11,75 @@ theme:
   name: material
   language: zh
   features:
-    - navigation.tabs
-    - navigation.sections
+    - header.autohide
     - navigation.indexes
+    - navigation.tracking
     - navigation.top
     - toc.follow
     - search.suggest
     - search.highlight
+    - search.share
     - content.code.copy
   palette:
     - scheme: default
       primary: blue
       accent: light blue
   font:
-    text: Roboto
+    text: Roboto Slab
     code: Roboto Mono
 
 nav:
-  - Home: index.md
-  - About: README/index.md
-  - Data Structures and Algorithms:
-      - Overview: ds-algorithm/index.md
-      - C++ Basics: ds-algorithm/cpp-basics.md
-      - BFS and DFS: ds-algorithm/bfs and dfs.md
+  - 首页 Home: index.md
+  - 数据结构与算法 Data Structures and Algorithms:
+      - ds-algorithm/index.md
+      - C++ 基础内容笔记: ds-algorithm/cpp-basics.md
       - Double Pointer: ds-algorithm/DoublePointer.md
-      - Sliding Window: ds-algorithm/滑动窗口.md
-      - Backtracking: ds-algorithm/回溯算法.md
-      - Hashing: ds-algorithm/哈希法.md
-      - Algorithms and AI:
-          - Overview: ds-algorithm/Algorithms&AI/overview.md
-          - Introduction: ds-algorithm/Algorithms&AI/algoIntro.md
-          - Complexity: ds-algorithm/Algorithms&AI/Complexity.md
-          - Factorial and Exponential: ds-algorithm/Algorithms&AI/Factorial&Exponential.md
-          - Sort Algorithms: ds-algorithm/Algorithms&AI/sortAlgo.md
-          - UFS and IFS: ds-algorithm/Algorithms&AI/UFS&IFS.md
-  - Operating System:
-      - Overview: os/index.md
-      - Basic API: os/BasicAPI.md
-      - Notes: os/NotesOfOS.md
-      - Lesson 1: os/lesson1.md
-      - Process: os/process.md
-      - Scheduling: os/scheduling.md
-      - Concurrency: os/concurrency.md
-      - Memory Management: os/memoryManagement.md
-      - Disk I/O: os/diskIO.md
-      - Hard Disk and RAID: os/Harddisk&RAID.md
-  - Computer Architecture:
-      - Overview: computer-architecture/index.md
-      - Total Knowledge: computer-architecture/totalKnowledge.md
-      - Tutorial 01: computer-architecture/tutorial01.md
-      - Cache: computer-architecture/cache.md
-      - Pipelining Superscalar: computer-architecture/Pipelining SuperScalar.md
-      - Bus Architecture: computer-architecture/bus_architecture.md
-      - I/O Improvements: computer-architecture/IO_improvements.md
-      - GPU: computer-architecture/GPU.md
-  - OOAD:
-      - Overview: ooad/index.md
+      - DFS and BFS: ds-algorithm/bfs and dfs.md
+      - 哈希法: ds-algorithm/哈希法.md
+      - 滑动窗口: ds-algorithm/滑动窗口.md
+      - 回溯算法: ds-algorithm/回溯算法.md
+      - Algorithms & AI:
+          - Algorithms & AI - Overview: ds-algorithm/Algorithms&AI/overview.md
+          - Algorithms & AI - Intro: ds-algorithm/Algorithms&AI/algoIntro.md
+          - Algorithms & AI - Complexity: ds-algorithm/Algorithms&AI/Complexity.md
+          - Algorithms & AI - Factorial & Exponential: ds-algorithm/Algorithms&AI/Factorial&Exponential.md
+          - Algorithms & AI - UFS & IFS: ds-algorithm/Algorithms&AI/UFS&IFS.md
+          - Algorithms & AI - Sort: ds-algorithm/Algorithms&AI/sortAlgo.md
+  - 操作系统 Operating System:
+      - os/index.md
+      - OS 基础知识: os/NotesOfOS.md
+      - OS Lesson 1: os/lesson1.md
+      - 进程调度 Scheduling: os/scheduling.md
+      - 基础 API Basic API: os/BasicAPI.md
+      - 进程 Process: os/process.md
+      - 并发 Concurrency: os/concurrency.md
+      - 内存管理 Memory Management: os/memoryManagement.md
+      - 磁盘 I/O Disk I/O: os/diskIO.md
+      - Harddisk&RAID: os/Harddisk&RAID.md
+  - 计算机组成原理 Principles of Computer Composition:
+      - computer-architecture/index.md
+      - 前四周汇总: computer-architecture/totalKnowledge.md
+      - Pipelining SuperScalar: computer-architecture/Pipelining SuperScalar.md
+      - tutorial01: computer-architecture/tutorial01.md
+      - 总线架构 bus architecture: computer-architecture/bus_architecture.md
+      - I/O 改进与控制方式: computer-architecture/IO_improvements.md
+      - GPGPU 与 GPU 架构: computer-architecture/GPU.md
+      - 缓存 Cache: computer-architecture/cache.md
+  - 面向对象分析与设计 OOAD:
+      - ooad/index.md
       - Class Relationship: ooad/week4_classRelationship.md
-      - UML Relationship and Component: ooad/week5_UMLrelationship&Component.md
+      - UML Relationship & Component: ooad/week5_UMLrelationship&Component.md
       - Package: ooad/week6_package.md
-      - SOLID Layers and Sequence: ooad/week8_solid&layers&sequence.md
+      - SOLID, Layers & Sequence: ooad/week8_solid&layers&sequence.md
       - Threat Modeling: ooad/threatModeling.md
-      - Observer: ooad/observer.md
-  - Engineering Notes:
-      - Overview: engineering-notes/index.md
-      - Log Knowledge: engineering-notes/log-knowledge.md
+      - 设计模式简介 Intro to Design Patterns: ooad/observer.md
+  - 工程手记 Engineering Notes:
+      - engineering-notes/index.md
+      - 学习日志 Log Knowledge: engineering-notes/log-knowledge.md
+
+not_in_nav: |
+  README/index.md
+  README/CONTRIBUTING.md
 
 markdown_extensions:
   - admonition
