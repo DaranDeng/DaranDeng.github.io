@@ -1,0 +1,63 @@
+:root {
+  --md-primary-fg-color: #2f6f9f;
+  --md-primary-fg-color--light: #4f91c4;
+  --md-primary-fg-color--dark: #1f4f75;
+  --md-accent-fg-color: #1d8ec2;
+}
+
+.md-header__title {
+  font-weight: 700;
+}
+
+.md-header__source {
+  width: 15rem;
+}
+
+.md-source {
+  max-width: none;
+}
+
+.md-source__repository {
+  max-width: none;
+  overflow: visible;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-header__title {
+    max-width: calc(100% - 16rem);
+  }
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+  font-weight: 700;
+}
+
+.md-typeset h1 {
+  margin-bottom: 1.2rem;
+}
+
+.md-typeset h2 {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.25rem;
+}
+
+.md-typeset table:not([class]) {
+  font-size: 0.78rem;
+}
+
+.md-typeset code {
+  border-radius: 0.2rem;
+}
+
+.md-sidebar--primary .md-nav__title {
+  font-weight: 700;
+}
+
+.md-nav__item--section > .md-nav__link {
+  font-weight: 700;
+}
+
+.giscus-comments {
+  margin-top: 2rem;
+}

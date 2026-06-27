@@ -1,0 +1,140 @@
+site_name: DaranDeng
+site_description: Computer Science learning notes
+site_author: Daran Deng
+site_url: https://darandeng.github.io/
+
+repo_name: DaranDeng/DaranDeng.github.io
+repo_url: https://github.com/DaranDeng/DaranDeng.github.io
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2025 - 2026 Daran Deng
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  features:
+    - header.autohide
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+  font:
+    text: Roboto Slab
+    code: Roboto Mono
+
+nav:
+  - 首页 Home: index.md
+  - 数据结构与算法 Data Structures and Algorithms:
+      - ds-algorithm/index.md
+      - C++ 基础内容笔记: ds-algorithm/cpp-basics.md
+      - Double Pointer: ds-algorithm/DoublePointer.md
+      - DFS and BFS: ds-algorithm/bfs and dfs.md
+      - 哈希法: ds-algorithm/哈希法.md
+      - 滑动窗口: ds-algorithm/滑动窗口.md
+      - 回溯算法: ds-algorithm/回溯算法.md
+      - Algorithms & AI:
+          - Algorithms & AI - Overview: ds-algorithm/Algorithms&AI/overview.md
+          - Algorithms & AI - Intro: ds-algorithm/Algorithms&AI/algoIntro.md
+          - Algorithms & AI - Complexity: ds-algorithm/Algorithms&AI/Complexity.md
+          - Algorithms & AI - Factorial & Exponential: ds-algorithm/Algorithms&AI/Factorial&Exponential.md
+          - Algorithms & AI - UFS & IFS: ds-algorithm/Algorithms&AI/UFS&IFS.md
+          - Algorithms & AI - Sort: ds-algorithm/Algorithms&AI/sortAlgo.md
+  - 操作系统 Operating System:
+      - os/index.md
+      - OS 基础知识: os/NotesOfOS.md
+      - OS Lesson 1: os/lesson1.md
+      - 进程调度 Scheduling: os/scheduling.md
+      - 基础 API Basic API: os/BasicAPI.md
+      - 进程 Process: os/process.md
+      - 并发 Concurrency: os/concurrency.md
+      - 内存管理 Memory Management: os/memoryManagement.md
+      - 磁盘 I/O Disk I/O: os/diskIO.md
+      - Harddisk&RAID: os/Harddisk&RAID.md
+  - 计算机组成原理 Principles of Computer Composition:
+      - computer-architecture/index.md
+      - 前四周汇总: computer-architecture/totalKnowledge.md
+      - Pipelining SuperScalar: computer-architecture/Pipelining SuperScalar.md
+      - tutorial01: computer-architecture/tutorial01.md
+      - 总线架构 bus architecture: computer-architecture/bus_architecture.md
+      - I/O 改进与控制方式: computer-architecture/IO_improvements.md
+      - GPGPU 与 GPU 架构: computer-architecture/GPU.md
+      - 缓存 Cache: computer-architecture/cache.md
+  - 面向对象分析与设计 OOAD:
+      - ooad/index.md
+      - Class Relationship: ooad/week4_classRelationship.md
+      - UML Relationship & Component: ooad/week5_UMLrelationship&Component.md
+      - Package: ooad/week6_package.md
+      - SOLID, Layers & Sequence: ooad/week8_solid&layers&sequence.md
+      - Threat Modeling: ooad/threatModeling.md
+      - 设计模式简介 Intro to Design Patterns: ooad/observer.md
+  - 工程手记 Engineering Notes:
+      - engineering-notes/index.md
+      - 学习日志 Log Knowledge: engineering-notes/log-knowledge.md
+
+not_in_nav: |
+  README/index.md
+  README/CONTRIBUTING.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: true
+      fallback_to_build_date: true
+
+extra_css:
+  - _static/css/extra.css
+
+extra_javascript:
+  - _static/js/extra.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: true
+  giscus:
+    enabled: true
+    repo: EndeavourCHN/DaranDeng.github.io
+    repo_id: R_kgDOTFshBA
+    category: General
+    category_id: DIC_kwDOTFshBM4C_8BG
+    mapping: pathname
+    strict: "0"
+    reactions_enabled: "1"
+    emit_metadata: "0"
+    input_position: bottom
+    lang: zh-CN
+    theme: preferred_color_scheme
+
+exclude_docs: |
+  superpowers/*
