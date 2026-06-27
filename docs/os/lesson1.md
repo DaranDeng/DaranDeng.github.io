@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 基本概念
 unified way统一接口
 main OS is always in primary memory. protected. 无法人为关闭某些进程

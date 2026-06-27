@@ -1,7 +1,7 @@
 ---
+layout: default
 title: solid and layers and sequence diagram
 ---
-
 ---
 
 ## 一、SOLID设计原则
@@ -54,6 +54,7 @@ title: solid and layers and sequence diagram
 ### 举例说明
 
 **三层架构**  
+
 - 表现层：`SearchPage`（用户输入）  
 - 业务层：`LibraryCatalogue`（搜索逻辑）  
 - 数据层：`BookRepository`（数据库操作）

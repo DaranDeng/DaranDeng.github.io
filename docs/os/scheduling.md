@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # 在操作系统的进程调度（Scheduling）中，评价调度算法好坏的指标通常分为两类：**面向用户的准则（User-Oriented Criteria）** 和 **面向系统的准则（System-Oriented Criteria）**。
 
 ## 两者对比表格
@@ -13,6 +17,7 @@
 - **先来先服务 (FCFS)**：对用户不友好（长进程阻塞短进程），但对系统简单、公平。
 - **时间片轮转 (RR)**：响应时间好（面向用户），但上下文切换开销可能降低吞吐量（面向系统）。
 - **短作业优先 (SJF)**：最小化平均周转时间（用户好），但可能导致长进程饥饿（系统公平性差）。
+
 调度算法的选择，就是在这两类准则间权衡。
 
 # CPU-bound & I/O-bound
@@ -22,6 +27,7 @@ limited by processing power or by external events(I/O)
 
 ## 评估指标：
 *用甘特图画*
+
 - **average waiting time**: 所有进程等待时间片之和/进程数
 - **overall time**：结束时刻-开始时刻
 
@@ -47,6 +53,7 @@ limited by processing power or by external events(I/O)
    - 优化:加一个阻塞队列，把复杂度从O(n)降到O(1)？
 
    1. 没有 Blocked Queue 时的 O(n) 问题（原始实现）
+
 所有进程（Ready + Blocked）都在 同一个大队列 里。
 
       当 I/O 完成时：

@@ -27,11 +27,13 @@ bounded buffer
 
 
 ## 消费者生产者问题
+
 + 需要信号量，因为生产者同步进行生产，生产出的资源填充对应buffer的空白区域
 + 需要互斥量，因为buffer是一个整体，一次只能被一个消费者访问拿取资源。
 + n是可用资源数
     f是空闲缓冲区数量，初始值为 size（缓冲区大小）
     s (semaphore)：二进制信号量，初始值为 1。用于保护缓冲区的互斥访问（Mutex），确保同一时间只有一个进程操作缓冲区。
+
 + ![alt text]({36F09A16-D223-46DC-AB20-575C70DF4012}.png)
   为什么以下的顺序不能互换？
 
@@ -58,10 +60,12 @@ https://chat.deepseek.com/share/rk0wh2o63zy5yjrio2
 略
 
 ### break
+
 + kill all the deadlocked processes
 + force all deadlocked processes back to last checkpoints and restart them if they have, not safe but simple
 
 ### avoid
+
 + 死锁的本质是资源不够用，如果哲学家进餐问题5个哲学家有10个叉子，就不会死锁
 + safe state: 只要能找到一种分配资源的顺序使得所有的进程都被满足就叫安全的。这里是考点，给你claim matrix and current state matrix and available vector，要你判断是否安全。这个需要在纸上演算。
 
@@ -119,6 +123,7 @@ https://chat.deepseek.com/share/rk0wh2o63zy5yjrio2
 
 
 # GUI
+
 + Message-based GUI。把输入包装成消息，用到消息队列
 + Immediate mode GUI。好处就是快，适合用于游戏。坏处是难以实现，难以理解。只需要把input处理成flag变量值，0或1.
 2. 共同要求：

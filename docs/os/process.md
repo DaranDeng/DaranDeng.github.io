@@ -6,11 +6,13 @@ PCB内容：三个板块
 process switch：
 context：关于计算机状态的信息，包括寄存器内容，执行的进程切换时也会改变。
 context switch：
+
 + 保存当前进程的状态：将当前进程的寄存器、程序计数器（PC）、堆栈指针等硬件上下文保存到该进程的进程控制块（PCB）中。
 
 + 选择下一个要执行的进程：调度器从就绪队列中选中另一个进程。
 
 + 恢复新进程的状态：从新进程的 PCB 中读取之前保存的上下文，加载到 CPU 寄存器中。
+
 CPU registers(user and system)
 process switch VS context switch
 
@@ -18,7 +20,9 @@ process switch VS context switch
 ## 考点：
 
 + 画进程的那个图
+
 ![alt text](image.png)
+
 + 解释为什么箭头是这样指向。
 
 ❌ 没有 Blocked → Running
@@ -37,6 +41,7 @@ process switch VS context switch
 
 
 ![alt text]({04C7659D-E784-4993-AF94-52FBA057F35A}.png)
+
 + 此图需要几个队列？
 
 ready  1

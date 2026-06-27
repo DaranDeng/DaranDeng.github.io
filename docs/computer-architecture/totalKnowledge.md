@@ -1,4 +1,5 @@
 ---
+layout: default
 title: 计算机组成原理总览
 ---
 

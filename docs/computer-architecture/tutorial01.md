@@ -1,4 +1,5 @@
 ---
+layout: default
 title: tutorial01
 ---
 
@@ -23,9 +24,11 @@ title: tutorial01
 ---
 
 **说明：**
+
 - **M**：BTB 未命中，预测为 **Not Taken**。  
   - 若实际 **Taken**，则分配新条目，历史位设为 **T**。  
   - 若实际 **Not Taken**，不分配条目。
+
 - **H**：BTB 命中，预测根据历史位：  
   - 历史 T → 预测 **Taken**  
   - 历史 N → 预测 **Not Taken**  
