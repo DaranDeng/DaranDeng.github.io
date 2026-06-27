@@ -57,3 +57,7 @@
 .md-nav__item--section > .md-nav__link {
   font-weight: 700;
 }
+
+.giscus-comments {
+  margin-top: 2rem;
+}

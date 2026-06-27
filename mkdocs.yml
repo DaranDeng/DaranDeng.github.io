@@ -7,8 +7,11 @@ repo_name: DaranDeng/DaranDeng.github.io
 repo_url: https://github.com/DaranDeng/DaranDeng.github.io
 edit_uri: edit/main/docs/
 
+copyright: Copyright &copy; 2025 - 2026 Daran Deng
+
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   features:
     - header.autohide
@@ -118,7 +121,20 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
-  generator: false
+  generator: true
+  giscus:
+    enabled: true
+    repo: EndeavourCHN/DaranDeng.github.io
+    repo_id: R_kgDOTFshBA
+    category: General
+    category_id: DIC_kwDOTFshBM4C_8BG
+    mapping: pathname
+    strict: "0"
+    reactions_enabled: "1"
+    emit_metadata: "0"
+    input_position: bottom
+    lang: zh-CN
+    theme: preferred_color_scheme
 
 exclude_docs: |
   superpowers/*
